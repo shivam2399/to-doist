@@ -1,11 +1,9 @@
-function TodoItem({ id, text, onDelete }) {
-    return (
-      <li>
-        {text}
-        <button onClick={() => onDelete(id)}>Delete</button>
-      </li>
-    );
-  }
-  
-  export default TodoItem;
-  
+function TodoItem({ todo }) {
+  return (
+    <li>
+      <span>{todo.text}</span> - <strong>{todo.status}</strong>
+    </li>
+  );
+}
+
+export default TodoItem;

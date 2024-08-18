@@ -6,6 +6,9 @@ function NewTodo({ onAddTodo }) {
   function submitHandler(event) {
     event.preventDefault();
     const enteredText = todoInputRef.current.value;
+
+    if (enteredText.trim().length === 0) return;
+
     onAddTodo(enteredText);
     todoInputRef.current.value = '';
   }
